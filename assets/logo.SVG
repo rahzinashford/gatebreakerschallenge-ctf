@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <!-- Dark Background Circle -->
+    <circle cx="250" cy="250" r="240" fill="#0F111A" />
+    
+    <!-- Outer Glowing Ring -->
+    <circle cx="250" cy="250" r="230" fill="none" stroke="#5E35B1" stroke-width="5" opacity="0.8" />
+    <circle cx="250" cy="250" r="230" fill="none" stroke="#3949AB" stroke-width="2" opacity="0.6" filter="blur(3px)" />
+    
+    <!-- Gate/Portal Design -->
+    <path d="M250 100 L150 200 L150 350 L350 350 L350 200 Z" fill="none" stroke="#7E57C2" stroke-width="8" />
+    
+    <!-- Broken Section of Gate -->
+    <path d="M300 200 L330 230 L290 270 L320 300" fill="none" stroke="#7E57C2" stroke-width="8" stroke-dasharray="20,10" />
+    <path d="M250 350 L250 320 L270 330 L290 300" fill="none" stroke="#7E57C2" stroke-width="8" />
+    
+    <!-- Digital Circuit Lines -->
+    <path d="M180 250 L220 250" stroke="#64B5F6" stroke-width="3" />
+    <path d="M280 250 L320 250" stroke="#64B5F6" stroke-width="3" />
+    <path d="M250 280 L250 320" stroke="#64B5F6" stroke-width="3" />
+    <path d="M200 220 L200 280" stroke="#64B5F6" stroke-width="3" />
+    <path d="M300 220 L300 280" stroke="#64B5F6" stroke-width="3" />
+    
+    <!-- Glowing Points -->
+    <circle cx="180" cy="250" r="5" fill="#03A9F4" />
+    <circle cx="320" cy="250" r="5" fill="#03A9F4" />
+    <circle cx="250" cy="320" r="5" fill="#03A9F4" />
+    <circle cx="200" cy="220" r="5" fill="#03A9F4" />
+    <circle cx="300" cy="220" r="5" fill="#03A9F4" />
+    <circle cx="200" cy="280" r="5" fill="#03A9F4" />
+    <circle cx="300" cy="280" r="5" fill="#03A9F4" />
+    
+    <!-- Main Center Node with Solo Leveling Inspired Effect -->
+    <circle cx="250" cy="250" r="25" fill="#303F9F" />
+    <circle cx="250" cy="250" r="20" fill="#5E35B1" />
+    <circle cx="250" cy="250" r="15" fill="#7E57C2" />
+    
+    <!-- Pulsing Effect -->
+    <circle cx="250" cy="250" r="35" fill="none" stroke="#3949AB" stroke-width="2" opacity="0.6" />
+    <circle cx="250" cy="250" r="45" fill="none" stroke="#3949AB" stroke-width="1" opacity="0.4" />
+    
+    <!-- Logo Text GBC -->
+    <text x="250" y="430" fill="#FFFFFF" font-family="Arial, sans-serif" font-weight="bold" font-size="60" text-anchor="middle">GBC</text>
+    
+    <!-- Solo Leveling Inspired Runes -->
+    <path d="M190 180 L200 170 L210 180 L200 190 Z" fill="#7C4DFF" />
+    <path d="M290 180 L300 170 L310 180 L300 190 Z" fill="#7C4DFF" />
+    <path d="M230 150 L250 135 L270 150 L250 165 Z" fill="#7C4DFF" />
+    
+    <!-- Subtle Shadow Effect -->
+    <circle cx="250" cy="250" r="240" fill="url(#shadow)" opacity="0.3" />
+    
+    <!-- Definitions -->
+    <defs>
+      <radialGradient id="shadow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+        <stop offset="0%" stop-color="#000000" stop-opacity="0.7" />
+        <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+  </svg>
