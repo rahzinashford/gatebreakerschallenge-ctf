@@ -1,0 +1,720 @@
+/* Index Page Specific Styles */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+}
+
+.matrix-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.glow-text {
+    color: #fff;
+    text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff, 0 0 30px #0099ff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #9900ff, 0 0 30px #9900ff, 0 0 40px #9900ff;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #0099ff, 0 0 20px #0099ff;
+    }
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Countdown Timer */
+.countdown-container {
+    margin: 2rem 0;
+}
+
+.countdown-container h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.countdown-item {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #6610f2;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 100px;
+    box-shadow: 0 0 15px rgba(102, 16, 242, 0.5);
+}
+
+.countdown-item span:first-child {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    color: #0099ff;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* CTA Button */
+.cta-button {
+    background: linear-gradient(45deg, #0099ff, #9900ff);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 153, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(153, 0, 255, 0.6);
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
+
+/* About Section */
+.about-section {
+    background-color: #111;
+    padding: 80px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, #0099ff, #9900ff);
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(90deg, #0099ff, #9900ff);
+    border-image-slice: 1;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.info-card i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #0099ff, #9900ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.info-card p {
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* Schedule Section */
+.schedule-section {
+    background-color: #0a0a0a;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.schedule-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 153, 255, 0.1), transparent 70%);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: linear-gradient(to bottom, #0099ff, #9900ff);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.timeline-date {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #0099ff, #9900ff);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.timeline-content {
+    width: calc(50% - 40px);
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-content h3 {
+    color: #0099ff;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    color: #ccc;
+}
+
+/* Featured Challenges Section */
+.challenges-preview {
+    padding: 80px 0;
+    background-color: #111;
+}
+
+.challenge-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.challenge-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    width: calc(25% - 30px);
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.challenge-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0099ff, #9900ff);
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+}
+
+.challenge-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #9900ff;
+}
+
+.challenge-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.challenge-card p {
+    color: #aaa;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    min-height: 40px;
+}
+
+.difficulty {
+    display: block;
+    color: #f5c518;
+    font-size: 1.2rem;
+}
+
+/* Announcements Section */
+.announcements {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+}
+
+.announcement-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.announcement-item {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #9900ff;
+    position: relative;
+    transition: transform 0.3s ease;
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.announcement-item:hover {
+    transform: translateX(5px);
+}
+
+.announcement-date {
+    color: #0099ff;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+    padding-right: 1em;
+}
+
+.announcement-item h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.announcement-item p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Section header with title and button */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Admin button */
+#add-announcement-btn {
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#add-announcement-btn:hover {
+    box-shadow: 0 0 15px var(--primary-purple-glow);
+    transform: translateY(-2px);
+}
+
+/* Add these styles to your styles.css file */
+
+/* Announcement item structure */
+.announcement-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.announcement-content {
+    flex-grow: 1;
+}
+
+.announcement-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: #fff;
+}
+
+.edit-announcement-btn:hover {
+    color: #4CAF50;
+}
+
+.delete-announcement-btn:hover {
+    color: #F44336;
+}
+
+/* Modal styles for delete confirmation */
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.delete-btn {
+    background-color: #F44336;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--card-bg);
+    margin: 10vh auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5),
+        0 0 15px var(--primary-blue-glow),
+        0 0 30px var(--primary-purple-glow);
+    border: 1px solid rgba(123, 44, 191, 0.3);
+    animation: slideDown 0.4s ease-out;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.modal h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary-purple);
+    text-shadow: 0 0 8px var(--primary-purple-glow);
+    transform: scale(1.1);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(123, 44, 191, 0.3);
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--text-primary);
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 10px var(--primary-blue-glow);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.submit-btn {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 15px var(--primary-purple-glow);
+    transform: translateY(-2px);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .countdown-item {
+        min-width: 80px;
+        padding: 10px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 2rem;
+    }
+
+    .challenge-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        min-width: 60px;
+        padding: 8px;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-date {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 60px !important;
+    }
+
+    .challenge-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .countdown-item {
+        min-width: 50px;
+        padding: 5px;
+    }
+
+    .countdown-item span:first-child {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

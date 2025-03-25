@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Competition - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Include navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="matrix-background"></div>
+        <div class="hero-content">
+            <h1 class="glow-text">GATE BREAKERS CHALLENGE</h1>
+            <p class="tagline">Test your cybersecurity skills and conquer challenges</p>
+
+            <div class="countdown-container">
+                <h2>Competition Begins In:</h2>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="cta-button guest-only">Register Now</button>
+        </div>
+    </section>
+
+    <!-- About CTF Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">What is CTF?</h2>
+            <p class="section-description">
+                Capture The Flag (CTF) is a cybersecurity competition that challenges participants to solve various
+                security puzzles and find hidden "flags".
+                These challenges cover a wide range of categories including web exploitation, cryptography, reverse
+                engineering, and more.
+            </p>
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <h3>Learn</h3>
+                    <p>Develop practical security skills through hands-on challenges</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3>Compete</h3>
+                    <p>Race against other teams to capture the most flags</p>
+                </div>
+                <div class="info-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Connect</h3>
+                    <p>Build relationships with fellow security enthusiasts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <div class="container">
+            <h2 class="section-title">Competition Schedule</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">March 15</div>
+                    <div class="timeline-content">
+                        <h3>Registration Opens</h3>
+                        <p>Form your teams and sign up to compete</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">March 25</div>
+                    <div class="timeline-content">
+                        <h3>Competition Starts</h3>
+                        <p>All challenges are unlocked and available to solve</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">March 27</div>
+                    <div class="timeline-content">
+                        <h3>Competition Ends</h3>
+                        <p>Final submission deadline for all flags</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">March 28</div>
+                    <div class="timeline-content">
+                        <h3>Award Ceremony</h3>
+                        <p>Winners announced and prizes distributed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Challenges Section -->
+    <section class="challenges-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Challenges</h2>
+            <div class="challenge-cards">
+                <div class="challenge-card">
+                    <div class="challenge-icon"><i class="fa-solid fa-globe"></i></div>
+                    <h3>Web Exploitation</h3>
+                    <p>Discover and exploit vulnerabilities in web applications</p>
+                    <span class="difficulty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i></span>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h3>Cryptography</h3>
+                    <p>Break codes and decrypt encrypted messages</p>
+                    <span class="difficulty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon"><i class="fa-solid fa-microchip"></i></div>
+                    <h3>Reverse Engineering</h3>
+                    <p>Analyze and understand complex software behavior</p>
+                    <span class="difficulty"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                </div>
+                <div class="challenge-card">
+                    <div class="challenge-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>Forensics</h3>
+                    <p>Extract hidden data and recover deleted information</p>
+                    <span class="difficulty"><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+                            class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements Section -->
+    <section class="announcements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Announcements</h2>
+                <button id="add-announcement-btn" class="admin-only" style="display: none;">
+                    <i class="fa-solid fa-plus"></i> Add
+                </button>
+            </div>
+            <div class="announcement-list">
+                <div class="announcement-item">
+                    <div class="announcement-date">March 8, 2025</div>
+                    <div class="announcement-content">
+                        <h3>Registration Now Open</h3>
+                        <p>Team registration is now available! Form teams of up to 2 members and prepare for the
+                            competition.</p>
+                    </div>
+                    <div class="announcement-actions admin-only" style="display: none;">
+                        <button class="action-btn edit-announcement-btn"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="action-btn delete-announcement-btn"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="announcement-item">
+                    <div class="announcement-date">March 5, 2025</div>
+                    <div class="announcement-content">
+                        <h3>Prize Pool Announced</h3>
+                        <p>This year's prize pool includes tech gadgets, internship opportunities, and more!</p>
+                    </div>
+                    <div class="announcement-actions admin-only" style="display: none;">
+                        <button class="action-btn edit-announcement-btn"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="action-btn delete-announcement-btn"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="announcement-item">
+                    <div class="announcement-date">March 1, 2025</div>
+                    <div class="announcement-content">
+                        <h3>CTF 2025 Coming Soon</h3>
+                        <p>Mark your calendars! Our annual CTF competition is scheduled for April 08, 2025.</p>
+                    </div>
+                    <div class="announcement-actions admin-only" style="display: none;">
+                        <button class="action-btn edit-announcement-btn"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="action-btn delete-announcement-btn"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcement Modal (replace the existing modal) -->
+    <div id="announcement-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Add New Announcement</h2>
+            <form id="announcement-form">
+                <input type="hidden" id="announcement-id" value="">
+                <div class="form-group">
+                    <label for="announcement-title">Title</label>
+                    <input type="text" id="announcement-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="announcement-description">Description</label>
+                    <textarea id="announcement-description" rows="4" required></textarea>
+                </div>
+                <button type="submit" id="announcement-submit-btn" class="submit-btn">Add Announcement</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal for Delete -->
+    <div id="confirm-delete-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Confirm Delete</h2>
+            <p>Are you sure you want to delete this announcement?</p>
+            <div class="modal-actions">
+                <button id="confirm-delete-btn" class="delete-btn">Delete</button>
+                <button id="cancel-delete-btn" class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+
+    <!-- Replace the script section at the bottom of index.html with this -->
+    <script src="js/navbar.js" defer></script>
+    <script src="js/index.js" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load Navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+
+                    // Very important: Initialize navbar components after the HTML is inserted
+                    if (typeof window.initializeNavbarComponents === 'function') {
+                        window.initializeNavbarComponents();
+                        // Call checkAuthStatus first and let it complete before checking index-specific auth
+                        checkAuthStatus().then(() => {
+                            checkAuthStatusForIndex();
+                        });
+                    } else {
+                        console.error("initializeNavbarComponents function not found");
+                    }
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+
+            // Load Footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error("Error loading footer:", error));
+        });
+    </script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load Navbar
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+    
+                    // Very important: Initialize navbar components after the HTML is inserted
+                    if (typeof window.initializeNavbarComponents === 'function') {
+                        window.initializeNavbarComponents();
+                        // Call checkAuthStatus first and let it complete before checking index-specific auth
+                        checkAuthStatus().then(() => {
+                            checkAuthStatusForIndex();
+                        });
+                    } else {
+                        console.error("initializeNavbarComponents function not found");
+                    }
+                })
+                .catch(error => console.error("Error loading navbar:", error));
+    
+            // Load Footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error("Error loading footer:", error));
+        });
+    </script> -->
+</body>
+
+</html>

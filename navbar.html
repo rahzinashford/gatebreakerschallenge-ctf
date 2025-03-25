@@ -1,0 +1,112 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="css/navbar.css">
+
+<nav class="navbar">
+    <div class="navbar-container">
+        <!-- Logo -->
+        <div class="navbar-logo">
+            <a href="index.html">
+                <img src="assets/logo.SVG" alt="CTF Logo">
+                <span>Gate Breakers Challenge</span>
+            </a>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="navbar-menu">
+            <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+            <li class="navbar-item"><a href="challenges.html" class="navbar-link">Challenges</a></li>
+            <li class="navbar-item"><a href="leaderboard.html" class="navbar-link">Leaderboard</a></li>
+            <li class="navbar-item"><a href="scorechart.html" class="navbar-link">Scorechart</a></li>
+        </ul>
+
+        <!-- Authentication Area -->
+        <div class="navbar-auth">
+            <!-- User Not Logged In (default state) -->
+            <div class="guest-controls">
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-register">Register</button>
+            </div>
+
+            <!-- User Logged In (will be hidden by default, toggled with JS) -->
+            <div class="user-controls hidden">
+                <div class="user-role">
+                    <span class="role-indicator">Player</span>
+                </div>
+                <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">0</span>
+                </div>
+                <div class="user-profile">
+                    <span class="username">Username</span>
+                    <button class="btn btn-logout">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<!-- Login Modal -->
+<div id="login-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" name="team_name" id="login-username" placeholder="Team Name" required>
+            <div class="password-container">
+                <input type="password" name="password" id="login-password" placeholder="Password" required>
+                <i class="password-toggle fas fa-eye-slash"
+                    onclick="togglePasswordVisibility('login-password', this)"></i>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#" onclick="switchToRegister()">Register</a>
+        <a href="#" onclick="switchToForgotPassword()">Forgot Password?</a>
+    </div>
+</div>
+
+<!-- Register Modal -->
+<div id="register-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="hidden" name="csrf_token" id="csrf_token" value="">
+            <input type="text" name="team_name" id="register-teamname" placeholder="Team Name" required>
+            <input type="email" name="email" id="register-email" placeholder="Email" required>
+            <div class="password-container">
+                <input type="password" name="password" id="register-password" placeholder="Password" required>
+                <i class="password-toggle fas fa-eye-slash"
+                    onclick="togglePasswordVisibility('register-password', this)"></i>
+            </div>
+            <div class="password-container">
+                <input type="password" name="confirm_password" id="register-confirm-password"
+                    placeholder="Retype Password" required>
+                <i class="password-toggle fas fa-eye-slash"
+                    onclick="togglePasswordVisibility('register-confirm-password', this)"></i>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <a href="#" onclick="switchToRegister()">Already have an account? Login</a>
+    </div>
+</div>
+
+<!-- Forgot Password Modal -->
+<div id="forgot-password-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Reset Password</h2>
+        <p>Enter your email address to receive a password reset link.</p>
+        <form id="forgot-password-form">
+            <input type="email" name="email" id="reset-email" placeholder="Email" required>
+            <button type="submit">Send Reset Link</button>
+        </form>
+        <div class="modal-links">
+            <a href="#" onclick="switchToLogin()">Remember your password? Login</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,450 @@
+/* navbar.css */
+:root {
+    --dark-bg: #0f0f1a;
+    --darker-bg: #090912;
+    --primary-blue: #2b6def;
+    --primary-purple: #8a2be2;
+    --secondary-blue: #3a7bd5;
+    --glow-blue: rgba(43, 109, 239, 0.5);
+    --glow-purple: rgba(138, 43, 226, 0.5);
+    --text-light: #e6e6fa;
+    --text-dim: #b8b8d1;
+}
+
+.navbar {
+    background-color: var(--darker-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(43, 109, 239, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Styling */
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-logo span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px var(--glow-blue);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-item {
+    margin: 0 1rem;
+}
+
+.navbar-link {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+    color: var(--text-light);
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
+    transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+    width: 100%;
+    box-shadow: 0 0 8px var(--glow-purple);
+}
+
+/* Authentication Area */
+.navbar-auth {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-login {
+    background-color: transparent;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    margin-right: 0.5rem;
+}
+
+.btn-login:hover {
+    background-color: rgba(43, 109, 239, 0.1);
+    box-shadow: 0 0 10px var(--glow-blue);
+}
+
+.btn-register {
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
+    color: white;
+}
+
+.btn-register:hover {
+    box-shadow: 0 0 15px var(--glow-purple);
+    transform: translateY(-2px);
+}
+
+.btn-logout {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-dim);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.7rem;
+}
+
+.btn-logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
+}
+
+/* User Controls when logged in */
+.user-controls {
+    display: flex;
+    align-items: center;
+}
+
+.role-indicator {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-purple));
+    color: white;
+    margin-right: 1rem;
+}
+
+.notification-icon {
+    position: relative;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.notification-icon i {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.notification-icon:hover i {
+    color: var(--text-light);
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: var(--primary-purple);
+    color: white;
+    font-size: 0.7rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px var(--glow-purple);
+}
+
+.username {
+    color: var(--text-light);
+    margin-right: 0.5rem;
+}
+
+/* Mobile Toggle */
+.navbar-toggle {
+    display: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Helper class to hide elements */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .navbar-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background-color: var(--darker-bg);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(43, 109, 239, 0.1);
+        padding: 1rem 0;
+    }
+
+    .navbar-menu.active {
+        left: 0;
+    }
+
+    .navbar-item {
+        margin: 1rem 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-auth {
+        margin-right: 2rem;
+    }
+
+    .btn-login,
+    .btn-register {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        padding: 0.8rem 1rem;
+    }
+
+    .navbar-logo span {
+        display: none;
+    }
+
+    .navbar-auth {
+        margin-right: 1rem;
+    }
+
+    .btn-login {
+        display: none;
+    }
+}
+
+/* Password visibility toggle */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.password-toggle:hover {
+    color: var(--primary-blue, #3498db);
+}
+
+.password-container input:focus + .password-toggle {
+    color: var(--primary-blue, #3498db);
+}
+
+
+/* Modal Styles */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--card-bg);
+    margin: 10vh auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5),
+        0 0 15px var(--primary-blue-glow),
+        0 0 30px var(--primary-purple-glow);
+    border: 1px solid rgba(123, 44, 191, 0.3);
+    animation: slideDown 0.4s ease-out;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.modal h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    color: var(--primary-purple);
+    text-shadow: 0 0 8px var(--primary-purple-glow);
+    transform: scale(1.1);
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.modal input {
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(123, 44, 191, 0.3);
+    background-color: rgba(30, 30, 30, 0.8);
+    color: var(--text-primary);
+    font-family: 'Roboto Mono', monospace;
+    transition: all 0.3s ease;
+}
+
+.modal input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 10px var(--primary-blue-glow);
+}
+
+.modal input::placeholder {
+    color: var(--text-muted);
+}
+
+.modal button {
+    padding: 0.8rem;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.modal button:hover {
+    box-shadow: 0 0 15px var(--primary-purple-glow);
+    transform: translateY(-2px);
+}
+
+.modal p {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+}
+
+.modal a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+.modal a:hover {
+    color: var(--primary-purple);
+    text-shadow: 0 0 5px var(--primary-purple-glow);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
