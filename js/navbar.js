@@ -1,18 +1,6 @@
 // Global flag to track if navbar components are initialized or not
 window.navbarLoaded = false;
 
-// Add this to your JavaScript file that handles registration
-document.addEventListener('DOMContentLoaded', function() {
-    // Fetch the CSRF token when page loads
-    fetch('get_csrf_token.php')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('csrf_token').value = data.csrf_token;
-        });
-    
-    // Your existing form submission code
-});
-
 // Toggle forgot password modal
 window.toggleForgotPasswordModal = function () {
     const modal = document.getElementById('forgot-password-modal');
