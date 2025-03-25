@@ -345,7 +345,8 @@ function handleLogout() {
 // Check authentication status
 // Modify window.checkAuthStatus function in navbar.js
 window.checkAuthStatus = function () {
-    return fetch('php/auth_status.php')
+    // return fetch('php/auth_status.php')
+    return fetch('http://gatebreakersctf.wuaze.com/php/auth_status.php')
         .then(response => response.json())
         .then(data => {
             if (data.authenticated) {
