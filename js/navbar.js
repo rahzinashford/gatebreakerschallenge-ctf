@@ -184,7 +184,7 @@ function handleLogin(e) {
     formData.append('password', password);
     
     // fetch('php/login.php', {
-    fetch('http://gatebreakersctf.wuaze.com/php/login.php', {
+    fetch('https://gatebreakersctf.wuaze.com/php/login.php', {
         method: 'POST',
         body: formData
     })
@@ -334,7 +334,7 @@ function handleLogout() {
 // Modify window.checkAuthStatus function in navbar.js
 window.checkAuthStatus = function () {
     // return fetch('php/auth_status.php')
-    return fetch('http://gatebreakersctf.wuaze.com/php/auth_status.php')
+    return fetch('https://gatebreakersctf.wuaze.com/php/auth_status.php')
         .then(response => response.json())
         .then(data => {
             if (data.authenticated) {
