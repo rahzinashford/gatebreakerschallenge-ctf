@@ -1,7 +1,7 @@
 // Check authentication status and handle admin-only elements
 function checkAuthStatusForIndex() {
     // fetch('php/auth_status.php')
-    fetch('http://gatebreakersctf.wuaze.com/php/auth_status.php')
+    fetch('https://gatebreakersctf.wuaze.com/php/auth_status.php')
         .then(response => response.json())
         .then(data => {
             if (data.authenticated && data.role === "admin") {
@@ -71,7 +71,7 @@ function displayAnnouncements(announcements) {
 // Check if user is admin and show admin controls
 function checkIfAdmin() {
     // fetch('php/auth_status.php')
-    fetch('http://gatebreakersctf.wuaze.com/php/auth_status.php')
+    fetch('https://gatebreakersctf.wuaze.com/php/auth_status.php')
         .then(response => response.json())
         .then(data => {
             if (data.authenticated && data.role === "admin") {
